@@ -1,0 +1,53 @@
+local v1 = require(game:GetService("ReplicatedStorage"):WaitForChild("GunScripts"):WaitForChild("GunStats"))
+
+local AccuracyStats = {
+    ["Colt .45"] = {["camShakeResist"] = 10000, ["Spread"] = 0, ["HipFireAccuracy"] = 0, ["ZoomAccuracy"] = 0},
+    ["Henry Rifle"] = {["camShakeResist"] = 10000, ["Spread"] = 0, ["HipFireAccuracy"] = 0, ["ZoomAccuracy"] = 0},
+    ["Sawed-Off Shotgun"] = {["camShakeResist"] = 10000, ["Spread"] = 0, ["HipFireAccuracy"] = 0, ["ZoomAccuracy"] = 0},
+    ["Double Barrel Shotgun"] = {["camShakeResist"] = 10000, ["Spread"] = 0, ["HipFireAccuracy"] = 0, ["ZoomAccuracy"] = 0},
+    ["Schofield Revolver"] = {["camShakeResist"] = 10000, ["Spread"] = 0, ["HipFireAccuracy"] = 0, ["ZoomAccuracy"] = 0},
+    ["Sharps Rifle"] = {["camShakeResist"] = 10000, ["Spread"] = 0, ["HipFireAccuracy"] = 0, ["ZoomAccuracy"] = 0},
+    ["Gold Buffalo Rifle"] = {["camShakeResist"] = 10000, ["Spread"] = 0, ["HipFireAccuracy"] = 0, ["ZoomAccuracy"] = 0},
+    ["Volcanic Pistol"] = {["camShakeResist"] = 10000, ["Spread"] = 0, ["HipFireAccuracy"] = 0, ["ZoomAccuracy"] = 0},
+    ["Winchester Rifle"] = {["camShakeResist"] = 10000, ["Spread"] = 0, ["HipFireAccuracy"] = 0, ["ZoomAccuracy"] = 0},
+    ["LeMat Revolver"] = {["camShakeResist"] = 10000, ["Spread"] = 0, ["HipFireAccuracy"] = 0, ["ZoomAccuracy"] = 0},
+    ["Mauser Pistol"] = {["camShakeResist"] = 10000, ["Spread"] = 0, ["HipFireAccuracy"] = 0, ["ZoomAccuracy"] = 0},
+    ["Bow"] = {["camShakeResist"] = 10000, ["Spread"] = 0, ["HipFireAccuracy"] = 0, ["ZoomAccuracy"] = 0},
+    ["Pump-action Shotgun"] = {["camShakeResist"] = 10000, ["Spread"] = 0, ["HipFireAccuracy"] = 0, ["ZoomAccuracy"] = 0},
+    ["Colt Navy"] = {["camShakeResist"] = 10000, ["Spread"] = 0, ["HipFireAccuracy"] = 0, ["ZoomAccuracy"] = 0},
+    ["Mosin-Nagant"] = {["camShakeResist"] = 10000, ["Spread"] = 0, ["HipFireAccuracy"] = 0, ["ZoomAccuracy"] = 0},
+    ["Gold Mosin"] = {["camShakeResist"] = 10000, ["Spread"] = 0, ["HipFireAccuracy"] = 0, ["ZoomAccuracy"] = 0},
+    ["Bergmann No. 3"] = {["camShakeResist"] = 10000, ["Spread"] = 0, ["HipFireAccuracy"] = 0, ["ZoomAccuracy"] = 0},
+    ["Colt 1911"] = {["camShakeResist"] = 10000, ["Spread"] = 0, ["HipFireAccuracy"] = 0, ["ZoomAccuracy"] = 0},
+    ["Double-Action Revolver"] = {["camShakeResist"] = 10000, ["Spread"] = 0, ["HipFireAccuracy"] = 0, ["ZoomAccuracy"] = 0},
+    ["Mondragon"] = {["camShakeResist"] = 10000, ["Spread"] = 0, ["HipFireAccuracy"] = 0, ["ZoomAccuracy"] = 0},
+    ["Gold Mondragon"] = {["camShakeResist"] = 10000, ["Spread"] = 0, ["HipFireAccuracy"] = 0, ["ZoomAccuracy"] = 0},
+    ["Joalland Pistol"] = {["camShakeResist"] = 10000, ["Spread"] = 0, ["HipFireAccuracy"] = 0, ["ZoomAccuracy"] = 0},
+    ["Winchester Model 94"] = {["camShakeResist"] = 10000, ["Spread"] = 0, ["HipFireAccuracy"] = 0, ["ZoomAccuracy"] = 0},
+    ["Colt Lightning"] = {["camShakeResist"] = 10000, ["Spread"] = 0, ["HipFireAccuracy"] = 0, ["ZoomAccuracy"] = 0},
+    ["Remington"] = {["camShakeResist"] = 10000, ["Spread"] = 0, ["HipFireAccuracy"] = 0, ["ZoomAccuracy"] = 0},
+    ["Gold Remington"] = {["camShakeResist"] = 10000, ["Spread"] = 0, ["HipFireAccuracy"] = 0, ["ZoomAccuracy"] = 0},
+    ["Martini-Henry"] = {["camShakeResist"] = 10000, ["Spread"] = 0, ["HipFireAccuracy"] = 0, ["ZoomAccuracy"] = 0}
+}
+
+for name, stats in pairs(AccuracyStats) do
+    if v1[name] then for k, v in pairs(stats) do v1[name][k] = v end end
+end
+
+-- VINCULAR VARIAÇÕES
+v1["Ornate Winchester"] = v1["Winchester Rifle"]
+v1["Ornate Colt"] = v1["Colt .45"]
+v1["Gold Schofield"] = v1["Schofield Revolver"]
+v1["Engraved Double-Action"] = v1["Double-Action Revolver"]
+v1["Volcanic Model 94"] = v1["Winchester Model 94"]
+v1["Volcanic Remington"] = v1.Remington
+v1["Winter's Bounty"] = v1["Gold Buffalo Rifle"]
+v1["Dark Colt Navy"] = v1["Colt Navy"]
+v1["Dark Mosin"] = v1["Mosin-Nagant"]
+v1["Ice Winchester 94"] = v1["Winchester Model 94"]
+v1.Flintlock = v1["Joalland Pistol"]
+v1.Musket = v1["Martini-Henry"]
+v1["Ice Mosin"] = v1["Mosin-Nagant"]
+v1["Maple Bow"] = v1.Bow
+
+print("TRXSH HUB: No Recoil Aplicado em todas as armas!")
